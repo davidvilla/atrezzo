@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright (C) 2020 David Villa Alises
+# Copyright (C) 2021 David Villa Alises
 #
 #
 # This program is free software; you can redistribute it and/or modify
@@ -25,7 +25,7 @@ import multiprocessing, logging
 
 config = dict(
     name             = 'attrezzo',
-    version          = '0.0.0',
+    version          = '0.0.1',
     description      = 'Test doubles for Python',
     keywords         = ['unit tests', 'doubles', 'stub', 'spy', 'mock'],
     author           = 'David Villa Alises',
