@@ -1,17 +1,12 @@
 from unittest import TestCase
+from attrezzo import DStub
 from hamcrest import assert_that, is_
-from attrezzo import Stub
 
 
-class FreeStubTests(TestCase):
-    def setUp(self):
-        self.stub = Stub()
-
+class StubTest(TestCase):
     def test_basic_stub_method(self):
-        with self.stub:
-            self.stub.foo().returns(2)
+        with DStub() as stub:
+            stub.foo().returns(2)
 
-        # print(self.stub)
-        # print(self.stub.foo)
-        # print(self.stub.foo())
-        assert_that(self.stub.foo(), is_(2))
+        self.assertEqual(stub.foo(), 2)
+        assert_that(stub.foo(), is_(2))
